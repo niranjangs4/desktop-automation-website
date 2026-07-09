@@ -220,53 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters(); // Initial check
 
     // ------------------------------------------------------------
-    // 6. Pricing Toggle
-    // ------------------------------------------------------------
-    const pricingToggle = document.getElementById('pricing-toggle');
-    const profPrice = document.getElementById('prof-price');
-    const profPeriod = document.getElementById('prof-period');
-    const monthlyLabels = document.querySelectorAll('.toggle-label-monthly');
-    const yearlyLabels = document.querySelectorAll('.toggle-label-yearly');
-
-    if (pricingToggle) {
-        pricingToggle.addEventListener('click', () => {
-            pricingToggle.classList.toggle('active');
-            const isAnnual = pricingToggle.classList.contains('active');
-
-            if (isAnnual) {
-                // Update active label styles
-                monthlyLabels.forEach(l => l.classList.remove('active'));
-                yearlyLabels.forEach(l => l.classList.add('active'));
-
-                // Set annual price for Professional (10% discount on ₹95,000)
-                if (profPrice) animatePriceChange(profPrice, 85500, '₹');
-                if (profPeriod) profPeriod.textContent = ' / Month (billed annually)';
-            } else {
-                // Update active label styles
-                monthlyLabels.forEach(l => l.classList.add('active'));
-                yearlyLabels.forEach(l => l.classList.remove('active'));
-
-                // Set monthly price
-                if (profPrice) animatePriceChange(profPrice, 85000, '₹');
-                if (profPeriod) profPeriod.textContent = ' / Month';
-            }
-        });
-    }
-
-    // Smooth price transition helper
-    const animatePriceChange = (element, targetValue, prefix) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(-10px)';
-        
-        setTimeout(() => {
-            element.textContent = prefix + targetValue.toLocaleString();
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }, 150);
-    };
-
-    // ------------------------------------------------------------
-    // 7. Modals: Demo Booking & Partner Forms
+    // 6. Modals: Demo Booking & Partner Forms
     // ------------------------------------------------------------
     const modalOverlay = document.getElementById('booking-modal');
     const modalClose = document.getElementById('modal-close');
@@ -276,12 +230,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const toast = document.getElementById('toast');
     const formSubject = document.getElementById('form-subject');
-
+ 
     // Trigger buttons
     const demoBtns = document.querySelectorAll('.trigger-demo');
     const partnerBtns = document.querySelectorAll('.trigger-partner');
     const salesBtns = document.querySelectorAll('.trigger-sales');
-
+ 
     const openModal = (type) => {
         if (!modalOverlay) return;
         
@@ -306,50 +260,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
-
+ 
         modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden'; // Lock background scroll
     };
-
+ 
     const closeModal = () => {
         if (!modalOverlay) return;
         modalOverlay.classList.remove('active');
         document.body.style.overflow = ''; // Restore scroll
         bookingForm.reset();
     };
-
+ 
     demoBtns.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); openModal('demo'); }));
     partnerBtns.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); openModal('partner'); }));
     salesBtns.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); openModal('sales'); }));
-
+ 
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
     }
-
+ 
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) closeModal();
         });
     }
-
+ 
     // ------------------------------------------------------------
-    // 8. Lead Capture Form Submission Handling (with Simulated Loader)
+    // 7. Lead Capture Form Submission Handling (AJAX to Netlify)
     // ------------------------------------------------------------
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
+ 
             // Set loading state
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="loader-dot">Processing...</span>';
-
-            // Simulate server network delay
-            setTimeout(() => {
-                // Success action
-                closeModal();
-                showToast('Thank you! Your request has been received. Our team will contact you shortly.');
-
+ 
+            // Prepare Form Data for Netlify Forms AJAX post
+            const formData = new FormData(bookingForm);
+            formData.append('form-name', 'booking-form'); // Required by Netlify
+ 
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                if (response.ok) {
+                    closeModal();
+                    showToast('Thank you! Your request has been received. Our team will contact you shortly.');
+                } else {
+                    showToast('Oops! Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                showToast('Network error. Please check your connection and try again.');
+            })
+            .finally(() => {
                 // Reset button
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
@@ -357,18 +327,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
-            }, 1500);
+            });
         });
     }
-
+ 
     // Success Toast notification helper
     const showToast = (message) => {
         if (!toast) return;
         const toastMsg = toast.querySelector('.toast-message');
         if (toastMsg) toastMsg.textContent = message;
-
+ 
         toast.classList.add('active');
-
+ 
         setTimeout(() => {
             toast.classList.remove('active');
         }, 5000); // hide after 5 seconds
