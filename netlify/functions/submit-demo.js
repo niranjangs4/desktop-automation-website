@@ -1,27 +1,39 @@
-// Netlify Serverless Function: Triggered automatically on form submissions
-exports.handler = async function(event, context) {
-  try {
-    const payload = JSON.parse(event.body).payload;
-    
-    // Extract form fields
-    const name = payload.data.name || 'Valued Customer';
-    const email = payload.data.email;
-    const company = payload.data.company || 'N/A';
-    const appType = payload.data.appType || 'N/A';
+// Netlify Serverless Function: submit-demo
+// Triggered by direct client-side POST requests
 
-    console.log(`Processing submission from: ${name} (${email}) for company: ${company}`);
+exports.handler = async function(event, context) {
+  // Only allow POST requests
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: "Method Not Allowed" })
+    };
+  }
+
+  try {
+    const data = JSON.parse(event.body);
+    
+    // Extract fields
+    const name = data.name || 'Valued Customer';
+    const email = data.email;
+    const company = data.company || 'N/A';
+    const appType = data.appType || 'N/A';
+
+    console.log(`Processing direct submission from: ${name} (${email}) for company: ${company}`);
 
     if (!email) {
-      console.error("No recipient email found in submission data.");
-      return { statusCode: 400, body: "Email field is missing." };
+      return { 
+        statusCode: 400, 
+        body: JSON.stringify({ error: "Email field is missing." }) 
+      };
     }
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     if (!RESEND_API_KEY) {
-      console.warn("RESEND_API_KEY environment variable is not defined. Email skipped.");
+      console.error("RESEND_API_KEY environment variable is not defined.");
       return { 
-        statusCode: 200, 
-        body: JSON.stringify({ message: "Verification successful. Set RESEND_API_KEY in Netlify to send actual emails." }) 
+        statusCode: 500, 
+        body: JSON.stringify({ error: "Email service is temporarily misconfigured. Please check RESEND_API_KEY." }) 
       };
     }
 
@@ -78,16 +90,24 @@ exports.handler = async function(event, context) {
     });
 
     const result = await response.json();
-    console.log("Resend API Email sent successfully. Response payload:", result);
+    console.log("Resend API response:", result);
 
     return {
       statusCode: 200,
+      headers: { 
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*" 
+      },
       body: JSON.stringify({ message: "Welcome email triggered successfully." })
     };
   } catch (error) {
-    console.error("Error sending welcome email:", error);
+    console.error("Error in submit-demo function:", error);
     return {
       statusCode: 500,
+      headers: { 
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      },
       body: JSON.stringify({ error: error.message })
     };
   }

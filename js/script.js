@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
  
     // ------------------------------------------------------------
-    // 7. Lead Capture Form Submission Handling (AJAX to Netlify)
+    // 7. Lead Capture Form Submission Handling (Direct API to Serverless Function)
     // ------------------------------------------------------------
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
@@ -298,26 +298,36 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="loader-dot">Processing...</span>';
  
-            // Prepare Form Data for Netlify Forms AJAX post
-            const formData = new FormData(bookingForm);
-            formData.append('form-name', 'booking-form'); // Required by Netlify
+            // Extract field values
+            const name = document.getElementById('full-name').value;
+            const email = document.getElementById('business-email').value;
+            const company = document.getElementById('company-name').value;
+            const appType = document.getElementById('app-type').value;
  
-            fetch('/', {
+            // Submit directly to Netlify serverless function API
+            fetch('/.netlify/functions/submit-demo', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, company, appType })
             })
             .then(response => {
                 if (response.ok) {
                     closeModal();
                     showToast('Thank you! Your request has been received. Our team will contact you shortly.');
                 } else {
-                    showToast('Oops! Something went wrong. Please try again.');
+                    // Try to parse error message if available
+                    return response.json().then(data => {
+                        throw new Error(data.error || 'Submission failed');
+                    }).catch(() => {
+                        throw new Error('Submission failed');
+                    });
                 }
             })
             .catch(error => {
                 console.error('Form submission error:', error);
-                showToast('Network error. Please check your connection and try again.');
+                showToast(error.message.includes('API key') 
+                    ? 'Email key is missing on server. Please configure RESEND_API_KEY.' 
+                    : 'Oops! Something went wrong. Please try again.');
             })
             .finally(() => {
                 // Reset button
