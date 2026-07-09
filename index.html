@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic SEO Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexoraIO | Enterprise Desktop Automation Platform</title>
+    <meta name="description" content="Automate legacy, modern, and complex desktop applications with an AI-powered platform. Built for real-world enterprise testing, Progress OpenEdge, Java, RDP, and custom thick clients.">
+    <meta name="keywords" content="desktop automation, RPA, Progress OpenEdge automation, legacy Windows automation, Java desktop testing, Citrix automation, QA regression, enterprise thick client automation">
+    
+    <!-- Open Graph Metadata (Social Preview) -->
+    <meta property="og:title" content="NexoraIO | Enterprise Desktop Automation Platform">
+    <meta property="og:description" content="Automate legacy, modern, and complex desktop applications with an AI-powered platform. Support for Win32, Progress OpenEdge, .NET, Java, Citrix, and custom thick clients.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexoraio.co.in">
+    
+    <!-- Google Fonts Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- --------------------------------------------------------
+       NAVBAR (Sticky Top Navigation)
+    --------------------------------------------------------- -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </div>
+                NexoraIO
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#problems" class="nav-link">Challenges</a></li>
+                <li><a href="#solutions" class="nav-link">Capabilities</a></li>
+                <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#proof" class="nav-link">Proof</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#partners" class="nav-link">Partners</a></li>
+                <li><a href="#support" class="nav-link">Support</a></li>
+                <!-- Mobile Only CTA -->
+                <li class="mobile-only"><a href="#" class="btn btn-primary trigger-demo">Book a Demo</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                <a href="#" class="btn btn-primary trigger-demo">Book a Demo</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- --------------------------------------------------------
+       1. HERO SECTION (Light Background)
+    --------------------------------------------------------- -->
+    <section id="hero" class="hero dark-section">
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <div class="badge badge-primary">
+                    <i data-lucide="shield-check" style="width:14px; height:14px;"></i> Enterprise-Grade Testing
+                </div>
+                <h1 class="hero-headline text-gradient">
+                    Desktop Automation for Any Enterprise Application
+                </h1>
+                <p class="hero-subheadline">
+                    Automate legacy, modern, and complex desktop applications with an AI-powered platform built for real-world enterprise testing.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#" class="btn btn-primary trigger-demo">
+                        Book a Demo <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </a>
+                    <a href="#pricing" class="btn btn-secondary">
+                        View Pricing
+                    </a>
+                </div>
+                
+                <div class="hero-badges-wrapper">
+                    <h3 class="hero-badges-title">Trusted Capabilities</h3>
+                    <div class="hero-badges">
+                        <div class="hero-badge-item">
+                            <i data-lucide="users"></i>
+                            <span>100+ Customers</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <i data-lucide="award"></i>
+                            <span>ISO Certified</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <i data-lucide="cpu"></i>
+                            <span>Progress/OpenEdge Ready</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <i data-lucide="handshake"></i>
+                            <span>Enterprise Partners</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <!-- Floating Ambient Circle decoration -->
+                <div class="floating-circle"></div>
+                
+                <!-- Interactive Dashboard Mockup -->
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span class="mockup-dot"></span>
+                            <span class="mockup-dot"></span>
+                            <span class="mockup-dot"></span>
+                        </div>
+                        <div class="mockup-address">NexoraIO Desktop Automation Studio v4.2</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-sidebar">
+                            <i data-lucide="play-circle" class="sidebar-icon active"></i>
+                            <i data-lucide="code" class="sidebar-icon"></i>
+                            <i data-lucide="bar-chart-2" class="sidebar-icon"></i>
+                            <i data-lucide="settings" class="sidebar-icon"></i>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-widgets">
+                                <div class="widget-card">
+                                    <div class="widget-label">Test Case Status</div>
+                                    <div class="widget-value text-success">Executing</div>
+                                </div>
+                                <div class="widget-card">
+                                    <div class="widget-label">Total Steps</div>
+                                    <div class="widget-value">42 / 42</div>
+                                </div>
+                                <div class="widget-card">
+                                    <div class="widget-label">Stability Index</div>
+                                    <div class="widget-value text-mint">99.8%</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Application View with Scanner Animation -->
+                            <div class="mockup-app-view">
+                                <div class="legacy-win-title">
+                                    <i data-lucide="monitor" style="width:12px; height:12px;"></i> CustomerDB_Manager.exe (Win32)
+                                </div>
+                                <div class="legacy-grid">
+                                    <div class="legacy-cell">Cust No:</div>
+                                    <div class="legacy-cell legacy-input"></div>
+                                    <div class="legacy-cell legacy-btn">Submit</div>
+                                    
+                                    <div class="legacy-cell">First Name:</div>
+                                    <div class="legacy-cell legacy-input"></div>
+                                    <div class="legacy-cell">Zip Code:</div>
+                                    
+                                    <div class="legacy-cell">Balance:</div>
+                                    <div class="legacy-cell legacy-input"></div>
+                                    <div class="legacy-cell legacy-btn">Edit</div>
+                                </div>
+                                
+                                <!-- Scanning Target Selector Box -->
+                                <div class="ai-selector-box" id="hero-selector-box"></div>
+                            </div>
+
+                            <div class="selector-path-overlay">
+                                <i data-lucide="target" style="width:14px; height:14px; color:var(--secondary);"></i>
+                                <div>Path: <span id="hero-selector-path">WinApp / Frame[1] / Grid[2] / Row[4] / Cell["Balance"]</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Chart Decorator -->
+                <div class="floating-chart-widget">
+                    <div class="chart-ring">
+                        <svg viewBox="0 0 36 36" style="transform: rotate(-90deg); width:48px; height:48px;">
+                            <path stroke="#1e293b" stroke-width="3" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path stroke="var(--secondary)" stroke-dasharray="85, 100" stroke-width="3" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size: 0.687rem; font-weight:700;">85%</div>
+                    </div>
+                    <div class="chart-text">
+                        <span style="font-size:0.75rem; font-weight:700; color:var(--dark-text-primary);">Manual Savings</span>
+                        <span style="font-size:0.625rem; color:var(--dark-text-muted);">QA Efficiency boost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       2. PROBLEM SECTION (Light Theme)
+    --------------------------------------------------------- -->
+    <section id="problems" class="light-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-secondary">The Problem</div>
+                <h2 class="section-title text-gradient">Desktop Automation Is Still Hard</h2>
+                <p class="section-subtitle">
+                    While web automation has progressed rapidly, enterprise desktop applications continue to break traditional testing tools, causing manual overhead.
+                </p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card reveal">
+                    <div class="problem-icon-wrapper">
+                        <i data-lucide="unlink"></i>
+                    </div>
+                    <h3>No Stable Selectors</h3>
+                    <p>Legacy systems like Progress OpenEdge, Java Swing, and Win32 lack stable HTML-style DOM tags, rendering tools like Selenium useless.</p>
+                </div>
+
+                <div class="problem-card reveal">
+                    <div class="problem-icon-wrapper">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <h3>Brittle Coordinate Automation</h3>
+                    <p>Coordinate-based execution breaks instantly on minor screen scaling adjustments, desktop resolutions, or application layout shifts.</p>
+                </div>
+
+                <div class="problem-card reveal">
+                    <div class="problem-icon-wrapper">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>Weeks of Manual Regression</h3>
+                    <p>Because automation fails repeatedly, QA teams spend days executing repetitive manual test scripts before every patch release.</p>
+                </div>
+
+                <div class="problem-card reveal">
+                    <div class="problem-icon-wrapper">
+                        <i data-lucide="dollar-sign"></i>
+                    </div>
+                    <h3>High Maintenance Costs</h3>
+                    <p>Existing commercial enterprise tools are expensive, heavily licensed, and require constant manual scripting to maintain run rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       3. SOLUTION SECTION (Light Theme Background)
+    --------------------------------------------------------- -->
+    <section id="solutions" class="dark-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-primary">Our Platform</div>
+                <h2 class="section-title text-gradient">One Platform for All Desktop Automation</h2>
+                <p class="section-subtitle">
+                    Our AI-driven execution engine integrates with all enterprise runtime interfaces, solving selector problems where standard frameworks fail.
+                </p>
+            </div>
+
+            <div class="solution-layout">
+                <div class="solution-grid">
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="monitor"></i>
+                        </div>
+                        <h3>Windows Desktop Support</h3>
+                        <p>Automate Win32, WPF, WinForms, C++, and custom Windows UI interfaces natively.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="layers"></i>
+                        </div>
+                        <h3>Progress OpenEdge & ABL</h3>
+                        <p>Specialized object hierarchy agents for OpenEdge / Progress 4GL enterprise ERP systems.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="coffee"></i>
+                        </div>
+                        <h3>.NET & Java Apps</h3>
+                        <p>Full support for Java Swing, JavaFX, SWT, Oracle Forms, and standard .NET structures.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="terminal"></i>
+                        </div>
+                        <h3>Citrix & Remote Desktops</h3>
+                        <p>Agentless automation over Citrix/RDP streams using advanced AI visual anchor mapping.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <h3>AI-Assisted Test Creation</h3>
+                        <p>Convert natural language instructions into automated execution sequences and elements.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+                        <h3>Self-Healing Engine</h3>
+                        <p>Automatic recovery from unexpected popups, delays, and structural element layout updates.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h3>Audit Logs & Reports</h3>
+                        <p>Visual step histories, full screen-recording videos, OCR logs, and debug assertion reports.</p>
+                    </div>
+
+                    <div class="solution-card reveal">
+                        <div class="solution-icon-wrapper">
+                            <i data-lucide="git-branch"></i>
+                        </div>
+                        <h3>CI/CD Native Execution</h3>
+                        <p>Run tests Headless or Headed via CLI, Jenkins, GitHub Actions, Azure DevOps, and GitLab.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Selector Mockup Demonstration Panel -->
+                <div class="solution-graphic reveal">
+                    <div class="solution-tabs-header">
+                        <button class="tab-btn active" data-type="windows">Windows Apps</button>
+                        <button class="tab-btn" data-type="progress">Progress OpenEdge</button>
+                        <button class="tab-btn" data-type="java">Java / .NET</button>
+                        <button class="tab-btn" data-type="citrix">Citrix / Remote</button>
+                    </div>
+
+                    <div class="mockup-app-view" style="height: 180px; margin-bottom: 1.25rem; background: rgba(9, 13, 22, 0.9);">
+                        <div class="legacy-win-title" id="solution-app-title">InventoryManager.exe (Win32 / WPF)</div>
+                        
+                        <div class="legacy-grid">
+                            <div class="legacy-cell" style="grid-column: span 1;">Item Code:</div>
+                            <div class="legacy-cell legacy-input" style="grid-column: span 2;"></div>
+                            <div class="legacy-cell legacy-btn" style="text-align: center;">Verify</div>
+
+                            <div class="legacy-cell">Total Stock:</div>
+                            <div class="legacy-cell legacy-input"></div>
+                            <div class="legacy-cell">Warehouse:</div>
+                            <div class="legacy-cell">Rack B2</div>
+                        </div>
+
+                        <!-- Selector Box overlay -->
+                        <div class="ai-selector-box" id="solution-selector-box" style="top: 80px; left: 30px; width: 180px; height: 25px; border-color: var(--secondary); transition: all 0.5s ease;"></div>
+                    </div>
+
+                    <div class="widget-card" style="background: rgba(15, 23, 42, 0.03); border: 1px solid rgba(15, 23, 42, 0.05);">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
+                            <span class="widget-label">Detection Method</span>
+                            <span class="badge" id="solution-method-badge" style="margin-bottom:0; font-size: 0.625rem; padding: 0.25rem 0.5rem; background: rgba(6, 182, 212, 0.1); color: var(--secondary); border:none;">Native Windows API</span>
+                        </div>
+                        <div style="font-family: monospace; font-size: 0.75rem; margin-bottom: 0.5rem; color: var(--dark-text-secondary);">
+                            Selector: <span id="solution-path-text" style="color:var(--dark-text-primary); word-break: break-all;">WinApp / Pane[0] / Grid[1] / Row[4] / Cell["InStock"]</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: var(--dark-text-secondary); display:flex; gap:0.5rem; align-items:center;">
+                            <span style="width: 8px; height: 8px; background: var(--success); border-radius: 50%; display:inline-block;"></span>
+                            Status: <span id="solution-status-text" style="color:var(--success);">Success (Confidence: 100%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       4. HOW IT WORKS SECTION (Light Theme - Interactive Flow)
+    --------------------------------------------------------- -->
+    <section id="how-it-works" class="light-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-secondary">Flow Diagram</div>
+                <h2 class="section-title text-gradient">How NexoraIO Works</h2>
+                <p class="section-subtitle">
+                    Deploy, record, execute, and analyze. Go from raw legacy binaries to stabilized pipeline regression in minutes.
+                </p>
+            </div>
+
+            <div class="flow-table-wrapper reveal">
+                <table class="flow-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Stage / Interface</th>
+                            <th>Automation Action & Process</th>
+                            <th>Key Deliverables</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="step-number-cell">01</td>
+                            <td class="step-stage-cell">
+                                <div class="step-stage-container">
+                                    <i data-lucide="link-2"></i>
+                                    <span>Connect Application</span>
+                                </div>
+                            </td>
+                            <td class="step-actions-cell">
+                                Point NexoraIO to your target application binary, web stream, or Citrix host session.
+                            </td>
+                            <td class="step-deliverables-cell">
+                                <div class="deliverable-badges">
+                                    <span class="deliverable-badge">Binary Link</span>
+                                    <span class="deliverable-badge">Citrix Host</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="step-number-cell">02</td>
+                            <td class="step-stage-cell">
+                                <div class="step-stage-container">
+                                    <i data-lucide="plus-circle"></i>
+                                    <span>Create Test Flow</span>
+                                </div>
+                            </td>
+                            <td class="step-actions-cell">
+                                Generate steps using our recorder or write assertions in plain English using AI assistance.
+                            </td>
+                            <td class="step-deliverables-cell">
+                                <div class="deliverable-badges">
+                                    <span class="deliverable-badge">AI Assertions</span>
+                                    <span class="deliverable-badge">Recorded Steps</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="step-number-cell">03</td>
+                            <td class="step-stage-cell">
+                                <div class="step-stage-container">
+                                    <i data-lucide="play-circle"></i>
+                                    <span>Execute Automation</span>
+                                </div>
+                            </td>
+                            <td class="step-actions-cell">
+                                Run tests across VM configurations or locally. Element self-healing corrects layout shifts.
+                            </td>
+                            <td class="step-deliverables-cell">
+                                <div class="deliverable-badges">
+                                    <span class="deliverable-badge">Virtual VMs</span>
+                                    <span class="deliverable-badge">Self-Healing</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="step-number-cell">04</td>
+                            <td class="step-stage-cell">
+                                <div class="step-stage-container">
+                                    <i data-lucide="file-text"></i>
+                                    <span>Review Reports</span>
+                                </div>
+                            </td>
+                            <td class="step-actions-cell">
+                                Review comprehensive logs, screen recordings, custom screenshots, and JIRA integrations.
+                            </td>
+                            <td class="step-deliverables-cell">
+                                <div class="deliverable-badges">
+                                    <span class="deliverable-badge">Audit Logs</span>
+                                    <span class="deliverable-badge">JIRA Sync</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       5. PRODUCT FEATURES (Light Background - Feature Grid)
+    --------------------------------------------------------- -->
+    <section id="features" class="dark-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-primary">Technical Specs</div>
+                <h2 class="section-title text-gradient">Enterprise-Grade Automation Engine</h2>
+                <p class="section-subtitle">
+                    Under the hood, NexoraIO combines visual understanding and accessibility tree API integrations to automate enterprise thick clients.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon-box">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>AI-Assisted Test Generation</h3>
+                    <p>Describe your test scenario (e.g. "Create new customer and verify balance updates") and our generator builds the structured step asserts.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon-box">
+                        <i data-lucide="mouse-pointer"></i>
+                    </div>
+                    <h3>No Hardcoded XY Coordinates</h3>
+                    <p>Instead of mapping pixels, we query object classes, layouts, and accessibility properties, keeping execution robust to resolution changes.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon-box">
+                        <i data-lucide="history"></i>
+                    </div>
+                    <h3>Legacy UI Object Handlers</h3>
+                    <p>Equipped with native drivers to read and write widget states for complex Progress ABL frames, VB6 applications, and Oracle Forms.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon-box">
+                        <i data-lucide="eye"></i>
+                    </div>
+                    <h3>Smart Element Recognition</h3>
+                    <p>Self-healing algorithms adapt to layout and styling modifications. If a button moves, NexoraIO finds it by logical hierarchy.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon-box">
+                        <i data-lucide="copy"></i>
+                    </div>
+                    <h3>Reusable Automation Blocks</h3>
+                    <p>Write generic modules (e.g., "Enter login credentials") once, and reference them across hundreds of test suites.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon-box">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+                    <h3>Advanced Error Recovery</h3>
+                    <p>Catches application crashes, database connection popups, and timeouts. Resets state automatically without failing the run.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       6. CUSTOMER PROOF SECTION (Light Theme - Stats & Testimonials)
+    --------------------------------------------------------- -->
+    <section id="proof" class="light-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-secondary">Proven Success</div>
+                <h2 class="section-title text-gradient">Trusted by Enterprise Desktop Teams</h2>
+                <p class="section-subtitle">
+                    SaaS and Legacy QA teams choose NexoraIO to replace unstable tools, saving hours of manual regression before releases.
+                </p>
+            </div>
+
+            <!-- Stats Counters -->
+            <div class="stats-row">
+                <div class="stat-card reveal">
+                    <div class="stat-number" data-target="100" data-suffix="+">0</div>
+                    <div class="stat-label">Onboarded Customers</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number" data-target="50000" data-suffix="+">0</div>
+                    <div class="stat-label">Automated Runs</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number" data-target="70" data-suffix="%">0</div>
+                    <div class="stat-label">Effort Saved</div>
+                </div>
+            </div>
+
+            <!-- Customer Logos Placeholder Grid -->
+            <div class="text-center reveal">
+                <h4 class="logos-title">Our Ecosystem & Integrations</h4>
+                <div class="logos-grid">
+                    <div class="logo-item">
+                        <i data-lucide="file-code"></i> Progress OpenEdge
+                    </div>
+                    <div class="logo-item">
+                        <i data-lucide="box"></i> Oracle Java Swing
+                    </div>
+                    <div class="logo-item">
+                        <i data-lucide="microsoft"></i> Microsoft .NET
+                    </div>
+                    <div class="logo-item">
+                        <i data-lucide="cloud"></i> Citrix Virtual Apps
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-quote">
+                        "Automating our Progress OpenEdge ERP system was a nightmare. Selenium couldn't touch it and coordinate tools broke with every Windows update. NexoraIO mapped the widget trees natively. We reduced regression from weeks to 3 minutes."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MS</div>
+                        <div class="author-info">
+                            <h4>Markus Sterling</h4>
+                            <p>VP of QA Automation, Sterling Integrators</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-quote">
+                        "We run hundreds of Windows virtual desktops on Citrix to service our backend accounting tools. NexoraIO's agentless visual alignment runs over the stream flawlessly. The AI selector healing cut our maintenance time by 90%."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Ananya Mehta</h4>
+                            <p>Director of Systems QA, Apex Global Banking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       7. PRICING SECTION (Light Background - Toggleable Cards)
+    --------------------------------------------------------- -->
+    <section id="pricing" class="dark-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-primary">Pricing Plans</div>
+                <h2 class="section-title text-gradient">Simple Pricing for Teams and Enterprises</h2>
+                <p class="section-subtitle">
+                    Select a plan that fits your volume. Save 10% by billing annually. All prices are in Indian Rupees (INR).
+                </p>
+            </div>
+
+            <!-- Monthly / Annual Toggle switch -->
+            <div class="pricing-toggle-container reveal">
+                <span class="pricing-toggle-label toggle-label-monthly active">Billed Monthly</span>
+                <div class="toggle-switch" id="pricing-toggle">
+                    <span class="toggle-circle"></span>
+                </div>
+                <span class="pricing-toggle-label toggle-label-yearly">Billed Annually</span>
+                <span class="discount-badge">Save 10%</span>
+            </div>
+
+            <div class="pricing-grid" style="display: flex; justify-content: center; align-items: stretch; max-width: 480px; margin: 0 auto; width: 100%;">
+                <!-- Professional Plan -->
+                <div class="pricing-card featured reveal" style="width: 100%;">
+                    <span class="featured-label">Most Popular ⭐</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan-name">Professional</h3>
+                        <p class="pricing-plan-desc">Designed for enterprise QA teams scaling automation</p>
+                    </div>
+                    <div class="pricing-cost">
+                        <span class="pricing-price" id="prof-price">₹95,000</span>
+                        <span class="pricing-period" id="prof-period"> / Month</span>
+                    </div>
+                    <ul class="pricing-features-list">
+                        <li class="pricing-feature-item">
+                            <i data-lucide="check"></i> 10L Tokens
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i data-lucide="check"></i> AI Smart Recorder
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i data-lucide="check"></i> Reusable Automation Components
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i data-lucide="check"></i> OCR & Intelligent Element Recognition
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i data-lucide="check"></i> Premium Support
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i data-lucide="check"></i> Priority Product Updates
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary trigger-demo">Book a Demo</a>
+                </div>
+            </div>
+
+            <!-- Enterprise Licensing Benefits Banner -->
+            <div class="enterprise-benefits-banner reveal">
+                <div class="enterprise-benefits-grid">
+                    <div>
+                        <div class="badge badge-secondary" style="margin-bottom: 0.75rem;">Benefits</div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--dark-text-primary);">Enterprise Licensing Benefits</h3>
+                        <p style="font-size: 0.875rem; color: var(--dark-text-secondary);">Tailored agreements to support massive scale and custom setups.</p>
+                    </div>
+                    <div class="benefits-items-grid">
+                        <div class="benefit-item">
+                            <i data-lucide="percent" class="benefit-icon"></i>
+                            <div>
+                                <h4 class="benefit-title">10% Annual Discount</h4>
+                                <p class="benefit-desc">Substantial savings on committing to annual billing cycles.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i data-lucide="users-2" class="benefit-icon"></i>
+                            <div>
+                                <h4 class="benefit-title">20% Volume Discount</h4>
+                                <p class="benefit-desc">Discount applied automatically for 50+ user licenses.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i data-lucide="user-check" class="benefit-icon"></i>
+                            <div>
+                                <h4 class="benefit-title">Dedicated Onboarding</h4>
+                                <p class="benefit-desc">Direct onboarding and deployment assistance for your QA team.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i data-lucide="globe" class="benefit-icon"></i>
+                            <div>
+                                <h4 class="benefit-title">Enterprise-Wide Rollouts</h4>
+                                <p class="benefit-desc">Custom pricing structures for organization-wide deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       8. PARTNER SECTION (Light Theme)
+    --------------------------------------------------------- -->
+    <section id="partners" class="light-section section-padding">
+        <div class="container">
+            <div class="partner-box reveal">
+                <div>
+                    <div class="badge badge-secondary">Global Partnerships</div>
+                    <h2 class="section-title text-gradient" style="margin-bottom:1rem;">Built for Partners and System Integrators</h2>
+                    <p style="color:var(--light-text-secondary); font-size:1.062rem; line-height:1.7;">
+                        Partner with us to deliver desktop automation transformation for legacy enterprise customers. Help clients modernise QA routines across Oracle, Progress, SAP, and custom Windows binaries.
+                    </p>
+                    <ul class="partner-benefit-list">
+                        <li class="partner-benefit-item">
+                            <i data-lucide="check-circle-2"></i> Custom partner pricing margins
+                        </li>
+                        <li class="partner-benefit-item">
+                            <i data-lucide="check-circle-2"></i> Dedicated technical integration support
+                        </li>
+                        <li class="partner-benefit-item">
+                            <i data-lucide="check-circle-2"></i> Certified NexoraIO engineer training
+                        </li>
+                    </ul>
+                </div>
+                <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+                    <div style="background:var(--light-bg); border:1px solid var(--light-card-border); padding:2rem; border-radius:var(--radius-lg); width:100%; box-shadow:var(--shadow-md);">
+                        <i data-lucide="users-2" style="width:48px; height:48px; color:var(--primary); margin-bottom:1rem;"></i>
+                        <h4 style="font-size:1.25rem; margin-bottom:0.75rem; color:var(--light-text-primary);">Integrator Network</h4>
+                        <p style="font-size:0.875rem; color:var(--light-text-secondary); margin-bottom:1.5rem;">Join 15+ global partners delivering high-scale desktop transformation.</p>
+                        <a href="#" class="btn btn-primary trigger-partner" style="width:100%;">Become a Partner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       9. SUPPORT SECTION (Light Background)
+    --------------------------------------------------------- -->
+    <section id="support" class="dark-section section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <div class="badge badge-primary">SLA & Training</div>
+                <h2 class="section-title text-gradient">Enterprise Support Included</h2>
+                <p class="section-subtitle">
+                    NexoraIO offers comprehensive customer success onboarding, ensuring your legacy desktop test suites run successfully from day one.
+                </p>
+            </div>
+
+            <div class="support-grid">
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>24/7 Email Support</h3>
+                    <p>Get priority help from desktop testing engineers at <a href="mailto:amith@nexoraio.co.in" style="color: var(--primary); font-weight:600;">amith@nexoraio.co.in</a>. Standard response SLA is under 4 hours.</p>
+                </div>
+
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="compass"></i>
+                    </div>
+                    <h3>Dedicated Onboarding</h3>
+                    <p>Receive a dedicated Customer Success Manager to assist you in designing folders, credentials, and initial structures.</p>
+                </div>
+
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <h3>Automation Consulting</h3>
+                    <p>Stuck on a complex progress frame or custom Java applet? Our solutions engineers write the target custom selectors for you.</p>
+                </div>
+
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="tool"></i>
+                    </div>
+                    <h3>Custom Framework Setup</h3>
+                    <p>We help integrate NexoraIO with your current testing frameworks, legacy systems, databases, and custom thick clients.</p>
+                </div>
+
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="workflow"></i>
+                    </div>
+                    <h3>CI/CD Pipeline Setup</h3>
+                    <p>Integrate automated execution scripts with Jenkins, Azure Pipelines, Gitlab Actions, and other triggers natively.</p>
+                </div>
+
+                <div class="support-card reveal">
+                    <div class="support-icon-wrapper">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h3>QA Team Workshops</h3>
+                    <p>Live training workshops, technical documentations, and certification programs to ensure your team is fully up to speed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       10. FINAL CTA SECTION (Light Background)
+    --------------------------------------------------------- -->
+    <section class="final-cta dark-section section-padding">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2 class="text-gradient">Ready to Automate Your Desktop Testing?</h2>
+                <p>
+                    Book a live customized demo and see how your manual desktop regression workflows can go from days to minutes.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary trigger-demo">
+                        Book Free Demo <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </a>
+                    <a href="#" class="btn btn-secondary trigger-sales">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------------------------------------
+       FOOTER
+    --------------------------------------------------------- -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" stroke="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        NexoraIO
+                    </a>
+                    <p class="footer-desc">
+                        Advanced AI-powered desktop automation platform supporting legacy Windows, Java desktop apps, Citrix/RDP, Progress OpenEdge, and custom enterprise tools.
+                    </p>
+                    <p style="margin-top: 1rem; font-size: 0.875rem;">
+                        <i data-lucide="mail" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 0.5rem; color: var(--primary);"></i>
+                        <a href="mailto:amith@nexoraio.co.in" class="footer-link" style="display: inline; padding: 0;">amith@nexoraio.co.in</a>
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="#solutions" class="footer-link">Capabilities</a></li>
+                        <li><a href="#features" class="footer-link">Product Features</a></li>
+                        <li><a href="#pricing" class="footer-link">Pricing Plans</a></li>
+                        <li><a href="#support" class="footer-link">Support & SLA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Partners</a></li>
+                        <li><a href="#" class="footer-link">ISO Compliance</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Trust & Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#" class="footer-link">Security Center</a></li>
+                        <li><a href="#" class="footer-link">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 NexoraIO Automation Technologies Pvt. Ltd. All rights reserved. ISO 9001 & 27001 Certified.
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i data-lucide="twitter" style="width:16px; height:16px;"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin" style="width:16px; height:16px;"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="github" style="width:16px; height:16px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --------------------------------------------------------
+       INTERACTIVE BOOKING MODAL (Pop-up dialog)
+    --------------------------------------------------------- -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Book a Free Live Demo</h3>
+                <p class="modal-desc" id="modal-desc">See our desktop agent automate Progress OpenEdge, Java, and Citrix workflows live. Select a date to meet our team.</p>
+            </div>
+            
+            <form id="booking-form">
+                <!-- Hidden fields for dynamic routing -->
+                <input type="hidden" id="form-subject" name="subject" value="Demo Booking">
+
+                <div class="form-group">
+                    <label class="form-label" for="full-name">Full Name</label>
+                    <input type="text" id="full-name" class="form-control" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="business-email">Work Email</label>
+                    <input type="email" id="business-email" class="form-control" placeholder="john.doe@enterprise.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="company-name">Company / Organization</label>
+                    <input type="text" id="company-name" class="form-control" placeholder="Acme Corporation" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="app-type">Primary Legacy Application</label>
+                    <select id="app-type" class="form-control form-select" required>
+                        <option value="" disabled selected>Select application type...</option>
+                        <option value="progress">Progress OpenEdge / ABL / 4GL</option>
+                        <option value="windows">Legacy Windows App (Win32, VB6, C++)</option>
+                        <option value="dotnet">Modern .NET Desktop (WPF, WinForms)</option>
+                        <option value="java">Java Desktop Client (Swing, SWT, Forms)</option>
+                        <option value="citrix">Citrix / Remote Desktop Streams</option>
+                        <option value="other">Other ERP / Thick Clients</option>
+                    </select>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">
+                        Confirm Demo Booking <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------------
+       SUCCESS TOAST NOTIFICATION
+    --------------------------------------------------------- -->
+    <div class="toast" id="toast">
+        <i data-lucide="check-circle" style="color:var(--success); width: 20px; height: 20px; flex-shrink: 0;"></i>
+        <div class="toast-message" style="line-height: 1.4;">
+            Thank you! Your request has been received. Our team will contact you shortly.
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------------
+       SCRIPTS
+    --------------------------------------------------------- -->
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Local JS execution handlers -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
