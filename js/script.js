@@ -250,10 +250,10 @@ document.addEventListener('DOMContentLoaded', () => {
             formSubject.value = 'Sales Inquiry';
             if (submitBtn) submitBtn.innerHTML = 'Contact Sales <i data-lucide="arrow-right" class="btn-icon"></i>';
         } else {
-            modalTitle.textContent = 'Book a Free Live Demo';
-            modalDesc.textContent = 'See our desktop agent automate Progress OpenEdge, Java, and Citrix workflows live. Select a date to meet our team.';
-            formSubject.value = 'Demo Booking';
-            if (submitBtn) submitBtn.innerHTML = 'Confirm Demo Booking <i data-lucide="arrow-right" class="btn-icon"></i>';
+            modalTitle.textContent = 'Get Started with NexoraIO';
+            modalDesc.textContent = 'Request setup assistance, onboarding, or custom deployment for your enterprise desktop applications. Fill in your details below to get started.';
+            formSubject.value = 'Get Started Request';
+            if (submitBtn) submitBtn.innerHTML = 'Get Started Now <i data-lucide="arrow-right" class="btn-icon"></i>';
         }
         
         // Re-render Lucide icons inside submit button if updated

@@ -51,7 +51,7 @@ exports.handler = async function(event, context) {
       from: `"Amith Dubey" <${GMAIL_USER}>`,
       to: email,
       replyTo: GMAIL_USER,
-      subject: 'Welcome to NexoraIO - Live Demo Scheduled',
+      subject: 'Welcome to NexoraIO - Onboarding & Next Steps',
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1e293b; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; background-color: #ffffff;">
           <div style="text-align: center; margin-bottom: 24px;">
@@ -61,7 +61,7 @@ exports.handler = async function(event, context) {
           
           <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 20px; margin-bottom: 20px;">
             <p style="font-size: 16px; margin: 0 0 16px 0;">Hi <strong>${name}</strong>,</p>
-            <p style="font-size: 15px; margin: 0 0 16px 0; color: #334155;">Thank you for reaching out! I've received your request for a live demo of NexoraIO.</p>
+            <p style="font-size: 15px; margin: 0 0 16px 0; color: #334155;">Thank you for reaching out! I've received your request to get started with NexoraIO.</p>
             <p style="font-size: 15px; margin: 0; color: #334155;">Here are the details we've received:</p>
             
             <div style="background-color: #f8fafc; border-radius: 8px; padding: 16px; margin: 16px 0; font-size: 14px; border: 1px solid #e2e8f0;">
@@ -79,7 +79,7 @@ exports.handler = async function(event, context) {
           </div>
 
           <div>
-            <p style="font-size: 15px; margin: 0 0 16px 0; color: #334155;">I will contact you shortly (typically within 4-12 hours) with a scheduling link so we can choose a convenient time for the live demo and discuss your specific automation workflows.</p>
+            <p style="font-size: 15px; margin: 0 0 16px 0; color: #334155;">I will contact you shortly (typically within 4-12 hours) to schedule a technical kick-off call, share our desktop agent download package, and help you configure your first automation workflow.</p>
             <p style="font-size: 15px; margin: 0 0 24px 0; color: #334155;">If you have any initial files, screenshots of forms, or specific questions in the meantime, feel free to reply directly to this email.</p>
             
             <p style="margin: 0; font-size: 15px; color: #0f172a;">Best regards,</p>
