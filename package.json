@@ -1,0 +1,9 @@
+{
+  "name": "desktop-automation-website",
+  "version": "1.0.0",
+  "description": "NexoraIO Desktop Automation Landing Page",
+  "main": "index.html",
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}
