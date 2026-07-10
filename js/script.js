@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Success Toast notification helper
     const showToast = (message) => {
         if (!toast) return;
-        const toastMsg = toast.querySelector('.toast-message');
+        const toastMsg = toast.querySelector('.nx-toast-message');
         if (toastMsg) toastMsg.textContent = message;
  
         toast.classList.add('active');

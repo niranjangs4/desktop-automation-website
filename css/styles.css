@@ -1729,10 +1729,14 @@ ul {
 }
 
 /* Success notification toast */
-.toast {
+.nx-toast {
     position: fixed;
     bottom: 2rem;
-    right: -300px;
+    right: 2rem;
+    transform: translateX(calc(100% + 3rem));
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     background: #0f172a;
     border-left: 4px solid var(--success);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1747,11 +1751,14 @@ ul {
     font-size: 0.937rem;
     box-shadow: var(--shadow-lg);
     z-index: 3000;
-    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease, visibility 0.4s ease;
 }
 
-.toast.active {
-    right: 2rem;
+.nx-toast.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* ------------------------------------------------------------
@@ -2028,6 +2035,8 @@ ul {
     .enterprise-benefits-banner {
         padding: 2rem 1.5rem;
     }
+    .benefits-items-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2037,6 +2046,7 @@ ul {
 .flow-table-wrapper {
     margin-top: 3rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     background: #ffffff;
     border: 1px solid var(--light-card-border);
     border-radius: var(--radius-xl);
@@ -2114,3 +2124,519 @@ ul {
     font-size: 0.75rem;
     font-weight: 600;
 }
+
+/* ------------------------------------------------------------
+   23. Enhanced Mobile Responsive Overrides
+------------------------------------------------------------ */
+
+/* ---- Tablet landscape (max-width: 1024px) ---- */
+@media (max-width: 1024px) {
+    .section-header {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .solution-graphic {
+        aspect-ratio: auto;
+    }
+
+    .cta-box {
+        padding: 4rem 2.5rem;
+    }
+
+    .cta-box h2 {
+        font-size: 2.25rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-col:first-child {
+        grid-column: span 2;
+    }
+}
+
+/* ---- Tablet portrait (max-width: 768px) ---- */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 7rem 0 3rem;
+    }
+
+    .hero-headline {
+        font-size: 2.25rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1.062rem;
+    }
+
+    .hero-badges {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .hero-badge-item {
+        font-size: 0.812rem;
+    }
+
+    /* Fixed mobile toggle z-index so it overlay menu doesn't block closing it */
+    .menu-toggle {
+        position: relative;
+        z-index: 1001;
+    }
+
+    /* Dashboard mockup adjustments */
+    .dashboard-mockup {
+        aspect-ratio: auto;
+    }
+
+    .mockup-body {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .mockup-content {
+        padding: 1rem;
+    }
+
+    .mockup-widgets {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .widget-value {
+        font-size: 1rem;
+    }
+
+    .floating-chart-widget {
+        display: none;
+    }
+
+    /* Solution section */
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .solution-graphic {
+        padding: 1.5rem;
+    }
+
+    .solution-tabs-header {
+        flex-wrap: wrap;
+        gap: 0.375rem;
+    }
+
+    .tab-btn {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.625rem;
+    }
+
+    /* Problem grid */
+    .problem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Features grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Support grid */
+    .support-grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+
+    .support-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Stats balanced 3-column layout on tablet */
+    .stats-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .stat-number {
+        font-size: 2.25rem;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 2rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+
+    /* Partners */
+    .partner-box {
+        text-align: center;
+    }
+
+    /* Logo grid */
+    .logos-grid {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .logo-item {
+        font-size: 1rem;
+    }
+
+    /* CTA */
+    .cta-box {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-box p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Flow table - add scroll hint */
+    .flow-table-wrapper {
+        border-radius: var(--radius-md);
+        position: relative;
+    }
+
+    .flow-table-wrapper::after {
+        content: '← Scroll →';
+        display: block;
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--light-text-muted);
+        padding: 0.75rem;
+        background: #f1f5f9;
+        border-top: 1px solid var(--light-card-border);
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3rem 0 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .footer-col:first-child {
+        grid-column: span 2;
+    }
+
+    .footer-desc {
+        max-width: 100%;
+    }
+
+    /* Modal */
+    .modal-content {
+        max-width: 90%;
+        padding: 2rem 1.5rem;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    /* Selector path overlay */
+    .selector-path-overlay {
+        font-size: 0.6rem;
+        padding: 0.375rem;
+    }
+}
+
+/* ---- Small mobile (max-width: 480px) ---- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-padding {
+        padding: 3.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .hero {
+        padding: 6rem 0 2.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.875rem;
+    }
+
+    .hero-subheadline {
+        font-size: 0.937rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+    }
+
+    .hero-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+    }
+
+    /* Hide complex mockup elements on very small screens */
+    .mockup-widgets {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mockup-sidebar {
+        display: none;
+    }
+
+    .mockup-body {
+        grid-template-columns: 1fr;
+    }
+
+    .mockup-address {
+        font-size: 0.625rem;
+    }
+
+    /* Preserves original 4-column layout mapping with scaled sizing */
+    .legacy-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.25rem;
+    }
+
+    .legacy-cell {
+        font-size: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    /* Solution cards */
+    .solution-card {
+        padding: 1.25rem;
+    }
+
+    .solution-card h3 {
+        font-size: 1rem;
+    }
+
+    .solution-card p {
+        font-size: 0.812rem;
+    }
+
+    .solution-graphic {
+        padding: 1rem;
+    }
+
+    /* Problem cards */
+    .problem-card {
+        padding: 1.5rem;
+    }
+
+    .problem-card h3 {
+        font-size: 1.125rem;
+    }
+
+    /* Features */
+    .feature-card {
+        padding: 1.25rem;
+    }
+
+    /* Stats */
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 0.937rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-quote::before {
+        font-size: 3.5rem;
+        top: -1.5rem;
+        left: -0.75rem;
+    }
+
+    .author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 0.812rem;
+    }
+
+    /* Partner section */
+    .partner-box {
+        padding: 2rem 1.25rem;
+        gap: 2rem;
+    }
+
+    .partner-benefit-item {
+        font-size: 0.875rem;
+    }
+
+    /* Logos */
+    .logos-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Support */
+    .support-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    /* CTA */
+    .cta-box {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-box p {
+        font-size: 0.937rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-col:first-child {
+        grid-column: span 1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    /* Modal */
+    .modal-content {
+        max-width: 95%;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+    }
+
+    .modal-desc {
+        font-size: 0.812rem;
+    }
+
+    /* Toast */
+    .nx-toast {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1.5rem;
+        max-width: none;
+        font-size: 0.812rem;
+        transform: translateY(calc(100% + 3rem));
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .nx-toast.active {
+        transform: translateY(0);
+    }
+}
+
+/* ---- Extra small (max-width: 360px) ---- */
+@media (max-width: 360px) {
+    .hero-headline {
+        font-size: 1.625rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .mockup-widgets {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        width: 90%;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+}
+
+/* Mobile-only utility */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
